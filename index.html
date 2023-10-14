@@ -76,7 +76,9 @@
               <option value="reclamacao_instalacao">
                 Reclamação de instalação/conecta+
               </option>
-              <option value="Reclamacao_reparo">Reclamação de reparo/alteração de endereço</option>
+              <option value="Reclamacao_reparo">
+                Reclamação de reparo/alteração de endereço
+              </option>
               <option value="reclamacao_recolhimento">
                 Reclamação de recolhimento
               </option>
@@ -122,7 +124,7 @@
               data-toggle="modal"
               data-target="#exampleModal"
             >
-              Buscar
+              Copiar
             </button>
           </div>
         </form>
@@ -141,32 +143,24 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <p id="exampleModalLabel">
-                </p>
-               
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
+                <div class="header_modal">
+                  <p id="exampleModalLabel"></p>
+                  <p id="sucesso" class="escondido"></p>
+                </div>
                 </button>
               </div>
               <div class="modal-body">
                 <p id="observacao"></p>
-
                 <p id="texto_modal"></p>
                 <p id="link"></p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="copiar">
-                  Copiar pessoas
-                </button>
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  class="btn btn-primary"
+                  id="copiar"
                   data-dismiss="modal"
+                  onclick="apagar()"
                 >
                   Sair
                 </button>
@@ -175,7 +169,6 @@
           </div>
         </div>
       </section>
-      <!-- Button trigger modal -->
     </main>
   </body>
 </html>
