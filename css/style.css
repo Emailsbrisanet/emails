@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+}
+header {
+  text-align: center;
+
+}
+
+form {
+  margin: 0 auto;
+  padding: 10px 20px;
+  max-width: 500px;
+  max-height: 900px;
+  display: block;
+}
+form div {
+  align-items: center;
+  padding: 10px;
+}
+form div select {
+  width: 100%;
+  padding: 10px 20px 10px;
+}
+form div select:focus {
+  background-color: #a4a4a4;
+}
+select option {
+  text-align: center;
+}
+form button {
+  width: 100px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.botao {
+  text-align: center;
+}
+.modal-header{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+#observacao{
+  border-bottom: 1px solid red;
+  font-size: 12px;
+  font-weight: bolder;
+}
+.link{
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid red;
+  transition: color 0.3s;
+}
+.link:hover{
+  color: black;
+  text-decoration: none;
+  border: none;
+}
