@@ -118,43 +118,47 @@ function responsaveis() {
     }
   }
   document.getElementById("sucesso").classList.add("escondido");
+  document.getElementById("texto_resposaveis").innerHTML = "";
+  document.getElementById("exampleModalLabel").innerHTML="";
   if (lider != "") {
     document.getElementById("copiar").disabled = false;
     com_supervisor =
+      "<ul><li>" +
       email_lider +
-      " <br/>" +
+      " </li><li>" +
       email_supervisor +
-      " <br/>" +
+      " </li><li>" +
       suportes[0].email +
-      " <br/>" +
+      " </li><li>" +
       suportes[1].email +
-      " <br/>" +
+      " </li><li>" +
       suportes[2].email +
-      " <br/>";
+      " </li>";
 
     sem_supervisor =
+      "<ul><li>" +
       email_lider +
-      " <br/>" +
+      " </li><li>" +
       suportes[0].email +
-      " <br/>" +
+      " </li><li>" +
       suportes[1].email +
-      " <br/>" +
+      " </li><li>" +
       suportes[2].email +
-      " <br/>";
+      " </li>";
     if (checkbox.checked) {
       switch (motivo) {
         case "rota":
           header_modal.innerHTML = "Rota inoperante fora do prazo";
           texto_modal.innerHTML =
             com_supervisor +
-            "imoc@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>imoc@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul> <br/>";
           observacao.innerHTML =
             "OBS: Não esqueça de anexar o chamado do IMOC no email.";
           break;
         case "janelas_indisponiveis":
           header_modal.innerHTML = "Janelas indisponíveis";
-          texto_modal.innerHTML = com_supervisor;
+          texto_modal.innerHTML = com_supervisor + "</ul>";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -167,20 +171,19 @@ function responsaveis() {
           header_modal.innerHTML = "Erro de coordenadas";
           texto_modal.innerHTML =
             com_supervisor +
-            "isabelaqueiroz@grupobrisanet.com.br <br/>" +
-            "cleudo.chaves@grupobrisanet.com.br <br/>" +
-            "jucileide.aquino@grupobrisanet.com.br <br/>" +
-            "rosariofeitosa@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>isabelaqueiroz@grupobrisanet.com.br </li>" +
+            "<li>cleudo.chaves@grupobrisanet.com.br </li>" +
+            "<li>jucileide.aquino@grupobrisanet.com.br </li>" +
+            "<li>rosariofeitosa@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML =
             "OBS: Perguntar sempre o endereço do comp. de residência ao cliente. <br/> Caso o endereço esteja de acordo com o sistema, basta marcar apenas o(a) líder, os suportes e Rosário.";
           link.innerHTML = "";
-
           break;
 
         case "reparo_fora":
           header_modal.innerHTML = "Cobrança de reparo fora do prazo";
-          texto_modal.innerHTML = com_supervisor;
+          texto_modal.innerHTML = com_supervisor + "</ul>";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -193,7 +196,7 @@ function responsaveis() {
 
         case "instalacao_fora":
           header_modal.innerHTML = "Cobrança de instalação fora do prazo";
-          texto_modal.innerHTML = com_supervisor;
+          texto_modal.innerHTML = com_supervisor + "</ul>";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -207,12 +210,12 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação de instalação / conecta+";
           texto_modal.innerHTML =
             com_supervisor +
-            "gestaodareclamacao@grupobrisanet.com.br <br/>" +
-            " andrelma@grupobrisanet.com.br <br/>" +
-            " flaviapaulino@grupobrisanet.com.br <br/>" +
-            "qualidade@grupobrisanet.com.br <br/>";
+            "<li>gestaodareclamacao@grupobrisanet.com.br </li>" +
+            "<li>andrelma@grupobrisanet.com.br </li>" +
+            "<li>flaviapaulino@grupobrisanet.com.br </li>" +
+            "<li>qualidade@grupobrisanet.com.br </li> </ul>";
           observacao.innerHTML =
-            "OBS: Não esquecer de marcar o gestor de instalação reponsável acessando o link abaixo.";
+            "OBS: Não esquecer de marcar o gestor de instalação responsável acessando o link abaixo.";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -224,13 +227,13 @@ function responsaveis() {
             "Reclamação de reparo / alteração de endereço";
           texto_modal.innerHTML =
             com_supervisor +
-            "gestaodareclamacao@grupobrisanet.com.br <br/>" +
-            " andrelma@grupobrisanet.com.br <br/>" +
-            " flaviapaulino@grupobrisanet.com.br <br/>" +
-            "qualidade@grupobrisanet.com.br <br/>";
+            "<li>gestaodareclamacao@grupobrisanet.com.br </li>" +
+            "<li>andrelma@grupobrisanet.com.br </li>" +
+            "<li>flaviapaulino@grupobrisanet.com.br </li>" +
+            "<li>qualidade@grupobrisanet.com.br </li> </ul>";
 
           observacao.innerHTML =
-            "OBS: Não esquecer de marcar o gestor de reparo reponsável acessando o link abaixo.";
+            "OBS: Não esquecer de marcar o gestor de reparo responsável acessando o link abaixo.";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -241,11 +244,11 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação de recolhimento";
           texto_modal.innerHTML =
             com_supervisor +
-            "retencao@grupobrisanet.com.br <br/>" +
-            " lideresretencao@grupobrisanet.com.br <br/>";
+            "<li>retencao@grupobrisanet.com.br </li>" +
+            "<li>lideresretencao@grupobrisanet.com.br </li></ul>";
 
           observacao.innerHTML =
-            "OBS: Não esquecer de marcar o gestor de recolhimento reponsável acessando o link abaixo.";
+            "OBS: Não esquecer de marcar o gestor de recolhimento responsável acessando o link abaixo.";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -254,7 +257,8 @@ function responsaveis() {
 
         case "gravacao_ligacao":
           header_modal.innerHTML = "Gravação de ligação";
-          texto_modal.innerHTML = com_supervisor + email_assistenteadm;
+          texto_modal.innerHTML =
+            com_supervisor + "<li>" + email_assistenteadm + " </li></ul>";
           observacao.innerHTML =
             "OBS: Caso a ligação que o cliente queira são de colaboradores de outros lideres, deve marcar os lideres afetados. <br/>OBS 2: Lembre-se de anexar o email que o cliente deseja receber a ligação.";
           link.innerHTML = "";
@@ -262,7 +266,8 @@ function responsaveis() {
 
         case "ligacores_recebidas":
           header_modal.innerHTML = "Receber ligações recebidas no fixo";
-          texto_modal.innerHTML = com_supervisor + email_assistenteadm;
+          texto_modal.innerHTML =
+            com_supervisor + "<li>" + email_assistenteadm + " </li></ul>";
           observacao.innerHTML =
             "OBS: Deve ser aberto chamado no SASKI antes para solicitar o arquivo .PDF contendo o histórico. <br/>OBS 2: Lembre-se de anexar o arquivo .PDF do histórico e o email que o cliente deseja receber o histórico.";
           link.innerHTML = "";
@@ -270,7 +275,8 @@ function responsaveis() {
 
         case "ligacoes_realizadas":
           header_modal.innerHTML = "Receber ligações realizadas no fixo";
-          texto_modal.innerHTML = com_supervisor + email_assistenteadm;
+          texto_modal.innerHTML =
+            com_supervisor + "<li>" + email_assistenteadm + " </li>>/ul>";
           observacao.innerHTML =
             "OBS: Deve ser aberto chamado no SASKI antes para solicitar o arquivo .PDF contendo o histórico. <br/>OBS 2: Lembre-se de anexar o arquivo .PDF do histórico e o email que o cliente deseja receber o histórico.";
           link.innerHTML = "";
@@ -280,8 +286,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação de portabilidade";
           texto_modal.innerHTML =
             com_supervisor +
-            "comercial@grupobrisanet.com.br <br/>" +
-            "portabilidade@grupobrisanet.com.br <br/>";
+            "<li>comercial@grupobrisanet.com.br </li>" +
+            "<li>portabilidade@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -290,8 +296,8 @@ function responsaveis() {
           header_modal.innerHTML = "Telefonia com status de desativada";
           texto_modal.innerHTML =
             com_supervisor +
-            "rosariofeitosa@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>rosariofeitosa@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -300,8 +306,8 @@ function responsaveis() {
           header_modal.innerHTML = "Falha de autenticação";
           texto_modal.innerHTML =
             com_supervisor +
-            "rosariofeitosa@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>rosariofeitosa@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -309,7 +315,8 @@ function responsaveis() {
         case "troca_numero":
           header_modal.innerHTML = "Troca de número base do fixo";
           texto_modal.innerHTML =
-            com_supervisor + "rosariofeitosa@grupobrisanet.com.br <br/>";
+            com_supervisor +
+            "<li>rosariofeitosa@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -318,9 +325,9 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaCliente";
           texto_modal.innerHTML =
             com_supervisor +
-            "pedrohenrique.aires@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br <br/>" +
-            "vanericadias@grupobrisanet.com.br";
+            "<li>pedrohenrique.aires@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li>" +
+            "<li>vanericadias@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -329,8 +336,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Netflix";
           texto_modal.innerHTML =
             com_supervisor +
-            "franciscoqueiroz@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>franciscoqueiroz@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
 
@@ -338,8 +345,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Globoplay";
           texto_modal.innerHTML =
             com_supervisor +
-            "franciscoqueiroz@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>franciscoqueiroz@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -348,8 +355,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaMusic";
           texto_modal.innerHTML =
             com_supervisor +
-            "mauricio@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>mauricio@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -358,8 +365,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaMóvel";
           texto_modal.innerHTML =
             com_supervisor +
-            "lilianequeiroz@grupobrisanet.com.br <br/>" +
-            "sacbrisamovel@grupobrisanet.com.br";
+            "<li>lilianequeiroz@grupobrisanet.com.br </li>" +
+            "<li>sacbrisamovel@grupobrisanet.com.br </li></ul";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -368,8 +375,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Skeelo";
           texto_modal.innerHTML =
             com_supervisor +
-            "larissa.nogueira@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>larissa.nogueira@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -378,8 +385,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Qualifica";
           texto_modal.innerHTML =
             com_supervisor +
-            "larissa.nogueira@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>larissa.nogueira@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -388,8 +395,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaPlay";
           texto_modal.innerHTML =
             com_supervisor +
-            "darle@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>darle@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -398,8 +405,8 @@ function responsaveis() {
           header_modal.innerHTML = "Solicitação cancelamento";
           texto_modal.innerHTML =
             com_supervisor +
-            "retencaoativo@grupobrisanet.com.br <br/>" +
-            "lideresretencao@grupobrisanet.com.br";
+            "<li>retencaoativo@grupobrisanet.com.br </li>" +
+            "<li>lideresretencao@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -408,15 +415,19 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação ouvidoria";
           texto_modal.innerHTML =
             com_supervisor +
-            "ouvidoria@grupobrisanet.com.br <br/>" +
-            "josianacosta@grupobrisanet.com.br <br/>" +
-            "supervisao.ouvidoria@grupobrisanet.com.br";
+            "<li>ouvidoria@grupobrisanet.com.br </li>" +
+            "<li>josianacosta@grupobrisanet.com.br </li>" +
+            "<li>supervisao.ouvidoria@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
 
         case "cipa":
-          texto_modal.innerHTML = email_lider + " <br/>comissãopdf@gmail.com";
+          header_modal.innerHTML = "Reclamação CIPA - PDF";
+          texto_modal.innerHTML =
+            "<ul><li>" +
+            email_lider +
+            " </li><li>comissãopdf@gmail.com </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -435,14 +446,14 @@ function responsaveis() {
           header_modal.innerHTML = "Rota inoperante fora do prazo";
           texto_modal.innerHTML =
             sem_supervisor +
-            "imoc@grupobrisanet.com.br  <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>imoc@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul> <br/>";
           observacao.innerHTML =
             "OBS: Não esqueça de anexar o chamado do IMOC no email.";
           break;
         case "janelas_indisponiveis":
           header_modal.innerHTML = "Janelas indisponíveis";
-          texto_modal.innerHTML = sem_supervisor;
+          texto_modal.innerHTML = sem_supervisor + "</ul>";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -455,20 +466,19 @@ function responsaveis() {
           header_modal.innerHTML = "Erro de coordenadas";
           texto_modal.innerHTML =
             sem_supervisor +
-            "isabelaqueiroz@grupobrisanet.com.br <br/>" +
-            "cleudo.chaves@grupobrisanet.com.br <br/>" +
-            "jucileide.aquino@grupobrisanet.com.br <br/>" +
-            "rosariofeitosa@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>isabelaqueiroz@grupobrisanet.com.br </li>" +
+            "<li>cleudo.chaves@grupobrisanet.com.br </li>" +
+            "<li>jucileide.aquino@grupobrisanet.com.br </li>" +
+            "<li>rosariofeitosa@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML =
             "OBS: Perguntar sempre o endereço do comp. de residência ao cliente. <br/> Caso o endereço esteja de acordo com o sistema, basta marcar apenas o(a) líder, os suportes e Rosário.";
           link.innerHTML = "";
-
           break;
 
         case "reparo_fora":
           header_modal.innerHTML = "Cobrança de reparo fora do prazo";
-          texto_modal.innerHTML = sem_supervisor;
+          texto_modal.innerHTML = sem_supervisor + "</ul>";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -481,7 +491,7 @@ function responsaveis() {
 
         case "instalacao_fora":
           header_modal.innerHTML = "Cobrança de instalação fora do prazo";
-          texto_modal.innerHTML = sem_supervisor;
+          texto_modal.innerHTML = sem_supervisor + "</ul>";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -495,12 +505,12 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação de instalação / conecta+";
           texto_modal.innerHTML =
             sem_supervisor +
-            "gestaodareclamacao@grupobrisanet.com.br <br/>" +
-            " andrelma@grupobrisanet.com.br <br/>" +
-            " flaviapaulino@grupobrisanet.com.br <br/>" +
-            "qualidade@grupobrisanet.com.br <br/>";
+            "<li>gestaodareclamacao@grupobrisanet.com.br </li>" +
+            "<li>andrelma@grupobrisanet.com.br </li>" +
+            "<li>flaviapaulino@grupobrisanet.com.br </li>" +
+            "<li>qualidade@grupobrisanet.com.br </li> </ul>";
           observacao.innerHTML =
-            "OBS: Não esquecer de marcar o gestor de instalação reponsável acessando o link abaixo.";
+            "OBS: Não esquecer de marcar o gestor de instalação responsável acessando o link abaixo.";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -512,13 +522,13 @@ function responsaveis() {
             "Reclamação de reparo / alteração de endereço";
           texto_modal.innerHTML =
             sem_supervisor +
-            "gestaodareclamacao@grupobrisanet.com.br <br/>" +
-            " andrelma@grupobrisanet.com.br <br/>" +
-            " flaviapaulino@grupobrisanet.com.br <br/>" +
-            "qualidade@grupobrisanet.com.br <br/>";
+            "<li>gestaodareclamacao@grupobrisanet.com.br </li>" +
+            "<li>andrelma@grupobrisanet.com.br </li>" +
+            "<li>flaviapaulino@grupobrisanet.com.br </li>" +
+            "<li>qualidade@grupobrisanet.com.br </li> </ul>";
 
           observacao.innerHTML =
-            "OBS: Não esquecer de marcar o gestor de reparo reponsável acessando o link abaixo.";
+            "OBS: Não esquecer de marcar o gestor de reparo responsável acessando o link abaixo.";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -529,11 +539,11 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação de recolhimento";
           texto_modal.innerHTML =
             sem_supervisor +
-            "retencao@grupobrisanet.com.br <br/>" +
-            " lideresretencao@grupobrisanet.com.br <br/>";
+            "<li>retencao@grupobrisanet.com.br </li>" +
+            "<li>lideresretencao@grupobrisanet.com.br </li></ul>";
 
           observacao.innerHTML =
-            "OBS: Não esquecer de marcar o gestor de recolhimento reponsável acessando o link abaixo.";
+            "OBS: Não esquecer de marcar o gestor de recolhimento responsável acessando o link abaixo.";
           link.innerHTML =
             "<a class='link' href = " +
             gestores_externos +
@@ -542,7 +552,8 @@ function responsaveis() {
 
         case "gravacao_ligacao":
           header_modal.innerHTML = "Gravação de ligação";
-          texto_modal.innerHTML = sem_supervisor + email_assistenteadm;
+          texto_modal.innerHTML =
+            sem_supervisor + "<li>" + email_assistenteadm + " </li></ul>";
           observacao.innerHTML =
             "OBS: Caso a ligação que o cliente queira são de colaboradores de outros lideres, deve marcar os lideres afetados. <br/>OBS 2: Lembre-se de anexar o email que o cliente deseja receber a ligação.";
           link.innerHTML = "";
@@ -550,7 +561,8 @@ function responsaveis() {
 
         case "ligacores_recebidas":
           header_modal.innerHTML = "Receber ligações recebidas no fixo";
-          texto_modal.innerHTML = sem_supervisor + email_assistenteadm;
+          texto_modal.innerHTML =
+            sem_supervisor + "<li>" + email_assistenteadm + " </li></ul>";
           observacao.innerHTML =
             "OBS: Deve ser aberto chamado no SASKI antes para solicitar o arquivo .PDF contendo o histórico. <br/>OBS 2: Lembre-se de anexar o arquivo .PDF do histórico e o email que o cliente deseja receber o histórico.";
           link.innerHTML = "";
@@ -558,7 +570,8 @@ function responsaveis() {
 
         case "ligacoes_realizadas":
           header_modal.innerHTML = "Receber ligações realizadas no fixo";
-          texto_modal.innerHTML = sem_supervisor + email_assistenteadm;
+          texto_modal.innerHTML =
+            sem_supervisor + "<li>" + email_assistenteadm + " </li>>/ul>";
           observacao.innerHTML =
             "OBS: Deve ser aberto chamado no SASKI antes para solicitar o arquivo .PDF contendo o histórico. <br/>OBS 2: Lembre-se de anexar o arquivo .PDF do histórico e o email que o cliente deseja receber o histórico.";
           link.innerHTML = "";
@@ -568,8 +581,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação de portabilidade";
           texto_modal.innerHTML =
             sem_supervisor +
-            "comercial@grupobrisanet.com.br <br/>" +
-            "portabilidade@grupobrisanet.com.br <br/>";
+            "<li>comercial@grupobrisanet.com.br </li>" +
+            "<li>portabilidade@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -578,8 +591,8 @@ function responsaveis() {
           header_modal.innerHTML = "Telefonia com status de desativada";
           texto_modal.innerHTML =
             sem_supervisor +
-            "rosariofeitosa@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>rosariofeitosa@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -588,8 +601,8 @@ function responsaveis() {
           header_modal.innerHTML = "Falha de autenticação";
           texto_modal.innerHTML =
             sem_supervisor +
-            "rosariofeitosa@grupobrisanet.com.br <br/>" +
-            "redesftth@grupobrisanet.com.br <br/>";
+            "<li>rosariofeitosa@grupobrisanet.com.br </li>" +
+            "<li>redesftth@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -597,7 +610,8 @@ function responsaveis() {
         case "troca_numero":
           header_modal.innerHTML = "Troca de número base do fixo";
           texto_modal.innerHTML =
-            sem_supervisor + "rosariofeitosa@grupobrisanet.com.br <br/>";
+            sem_supervisor +
+            "<li>rosariofeitosa@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -606,9 +620,9 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaCliente";
           texto_modal.innerHTML =
             sem_supervisor +
-            "pedrohenrique.aires@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br <br/>" +
-            "vanericadias@grupobrisanet.com.br";
+            "<li>pedrohenrique.aires@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li>" +
+            "<li>vanericadias@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -617,8 +631,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Netflix";
           texto_modal.innerHTML =
             sem_supervisor +
-            "franciscoqueiroz@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>franciscoqueiroz@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
 
@@ -626,8 +640,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Globoplay";
           texto_modal.innerHTML =
             sem_supervisor +
-            "franciscoqueiroz@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>franciscoqueiroz@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -636,8 +650,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaMusic";
           texto_modal.innerHTML =
             sem_supervisor +
-            "mauricio@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>mauricio@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -646,8 +660,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaMóvel";
           texto_modal.innerHTML =
             sem_supervisor +
-            "lilianequeiroz@grupobrisanet.com.br <br/>" +
-            "sacbrisamovel@grupobrisanet.com.br";
+            "<li>lilianequeiroz@grupobrisanet.com.br </li>" +
+            "<li>sacbrisamovel@grupobrisanet.com.br </li></ul";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -656,8 +670,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Skeelo";
           texto_modal.innerHTML =
             sem_supervisor +
-            "larissa.nogueira@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>larissa.nogueira@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -666,8 +680,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação Qualifica";
           texto_modal.innerHTML =
             sem_supervisor +
-            "larissa.nogueira@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>larissa.nogueira@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -676,8 +690,8 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação BrisaPlay";
           texto_modal.innerHTML =
             sem_supervisor +
-            "darle@grupobrisanet.com.br <br/>" +
-            "produtos.suporte@grupobrisanet.com.br";
+            "<li>darle@grupobrisanet.com.br </li>" +
+            "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -686,8 +700,8 @@ function responsaveis() {
           header_modal.innerHTML = "Solicitação cancelamento";
           texto_modal.innerHTML =
             sem_supervisor +
-            "retencaoativo@grupobrisanet.com.br <br/>" +
-            "lideresretencao@grupobrisanet.com.br";
+            "<li>retencaoativo@grupobrisanet.com.br </li>" +
+            "<li>lideresretencao@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -696,15 +710,19 @@ function responsaveis() {
           header_modal.innerHTML = "Reclamação ouvidoria";
           texto_modal.innerHTML =
             sem_supervisor +
-            "ouvidoria@grupobrisanet.com.br <br/>" +
-            "josianacosta@grupobrisanet.com.br <br/>" +
-            "supervisao.ouvidoria@grupobrisanet.com.br";
+            "<li>ouvidoria@grupobrisanet.com.br </li>" +
+            "<li>josianacosta@grupobrisanet.com.br </li>" +
+            "<li>supervisao.ouvidoria@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
 
         case "cipa":
-          texto_modal.innerHTML = email_lider + " <br/>comissãopdf@gmail.com";
+          header_modal.innerHTML = "Reclamação CIPA - PDF";
+          texto_modal.innerHTML =
+            "<ul><li>" +
+            email_lider +
+            " </li><li>comissãopdf@gmail.com </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -725,15 +743,14 @@ function responsaveis() {
   }
   if (lider != "" && motivo != "") {
     const aparecer = document.getElementById("sucesso");
-
-    copiarTexto();
-
+    document.getElementById("texto_resposaveis").innerHTML =
+      "Responsáveis pela situação:";
     aparecer.innerHTML = "Copiado com sucesso!";
     setTimeout(function () {
       aparecer.classList.remove("escondido");
     }, 900);
-
     aparecer.classList.add("sucesso");
+    copiarTexto();
   }
 }
 
