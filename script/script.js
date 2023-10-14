@@ -121,7 +121,6 @@ function responsaveis() {
   document.getElementById("texto_resposaveis").innerHTML = "";
   document.getElementById("exampleModalLabel").innerHTML="";
   if (lider != "") {
-    document.getElementById("copiar").disabled = false;
     com_supervisor =
       "<ul><li>" +
       email_lider +
@@ -435,7 +434,6 @@ function responsaveis() {
         default:
           document.getElementById("texto_modal").innerHTML =
             "ERRO: Selecione um problema.";
-          document.getElementById("copiar").disabled = true;
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -730,7 +728,6 @@ function responsaveis() {
         default:
           document.getElementById("texto_modal").innerHTML =
             "ERRO: Selecione um problema.";
-          document.getElementById("copiar").disabled = true;
           observacao.innerHTML = "";
           link.innerHTML = "";
           break;
@@ -739,8 +736,7 @@ function responsaveis() {
   } else {
     document.getElementById("texto_modal").innerHTML =
       "ERRO: Selecione seu líder.";
-    document.getElementById("copiar").disabled = true;
-  }
+    }
   if (lider != "" && motivo != "") {
     const aparecer = document.getElementById("sucesso");
     document.getElementById("texto_resposaveis").innerHTML =
