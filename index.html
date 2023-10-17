@@ -27,13 +27,25 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Emails internos</title>
   </head>
   <body>
-    <header>
-      <h1>Projeto emails Brisanet</h1>
+    <header class="d-flex justify-content-around">
+      <a href="index.html">
+        <img src="images/Brisanet_logo.png" alt="Logo Brisanet" title="Logo Brisanet telecomunicações SA">
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#emails">Emails</a>
+            <a href="#sobre">Sobre
+            </a>
+          </li>
+        </ul>
+      </nav> 
     </header>
-    <main>
+    <main id="emails">
       <section>
         <form method="dialog">
           <div>
@@ -50,6 +62,7 @@
               <option value="lianzyo_vinicios">Lianzyo Vinicios</option>
               <option value="jose_tiago">José Tiago</option>
               <option value="victor_kennedy">Victor Kennedy</option>
+              <option value="sebastiao_aquino">Sebastião Aquino</option>
             </select>
           </div>
           <div>
@@ -119,7 +132,8 @@
             </select>
           </div>
           <div class="botao">
-            <button
+            <button 
+              class="btn btn-danger"
               onclick="responsaveis()"
               data-toggle="modal"
               data-target="#exampleModal"
@@ -157,8 +171,8 @@
               </div>
               <div class="modal-footer">
                 <button
+                  class="btn btn-danger"
                   type="button"
-                  class="btn btn-primary"
                   id="copiar"
                   data-dismiss="modal"
                   onclick="apagar()"
@@ -171,5 +185,10 @@
         </div>
       </section>
     </main>
+    <footer id="sobre">
+      <p>Desenvolvido por <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhslndrd@gmail.com&su=Sistema de emails&body=Olá, gostaria de dar um feedback referente a plataforma de emails que vocẽ desenvolveu :)" target="_blank">Jonas Henrique</a> - Suporte Varejo Receptivo - <span class="fa fa-whatsapp"> <a href="https://wa.me/5584998680100/?text=Olá%20gostaria%20de%falar%sobre%o%20sistema%20de%emails"target="_blank"> (84) 9 9868-0100</a></span></p>
+
+      <p>© 2023 Sistema de emails - Todos os direitos reservados</p>
+    </footer>
   </body>
 </html>

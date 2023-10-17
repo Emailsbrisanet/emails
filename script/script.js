@@ -59,7 +59,13 @@ const lideres = [
     supervisor: "franciscoleandro@grupobrisanet.com.br",
     assistenteadm: "jennyferrakelly@grupobrisanet.com.br",
   },
-  //   10 lideres
+  {
+    nome: "sebastiao_aquino",
+    email: "sebastiao.aquino@grupobrisanet.com.br",
+    supervisor: "fagnerfreitas@grupobrisanet.com.br",
+    assistenteadm: "jennyferrakelly@grupobrisanet.com.br",
+  },
+  //   11 lideres
 ];
 const suportes = [
   { nome: "sup_receptivo", email: "suportereceptivo@grupobrisanet.com.br" },
@@ -119,10 +125,10 @@ function responsaveis() {
   }
   document.getElementById("sucesso").classList.add("escondido");
   document.getElementById("texto_resposaveis").innerHTML = "";
-  document.getElementById("exampleModalLabel").innerHTML="";
+  document.getElementById("exampleModalLabel").innerHTML = "";
   if (lider != "") {
     com_supervisor =
-      "<ul><li>" +
+      "<ul class='ul_script'><li>" +
       email_lider +
       " </li><li>" +
       email_supervisor +
@@ -135,7 +141,7 @@ function responsaveis() {
       " </li>";
 
     sem_supervisor =
-      "<ul><li>" +
+      "<ul class='ul_script'><li>" +
       email_lider +
       " </li><li>" +
       suportes[0].email +
@@ -275,7 +281,7 @@ function responsaveis() {
         case "ligacoes_realizadas":
           header_modal.innerHTML = "Receber ligações realizadas no fixo";
           texto_modal.innerHTML =
-            com_supervisor + "<li>" + email_assistenteadm + " </li>>/ul>";
+            com_supervisor + "<li>" + email_assistenteadm + " </li></ul>";
           observacao.innerHTML =
             "OBS: Deve ser aberto chamado no SASKI antes para solicitar o arquivo .PDF contendo o histórico. <br/>OBS 2: Lembre-se de anexar o arquivo .PDF do histórico e o email que o cliente deseja receber o histórico.";
           link.innerHTML = "";
@@ -339,6 +345,7 @@ function responsaveis() {
             "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
+          break;
 
         case "globoplay":
           header_modal.innerHTML = "Reclamação Globoplay";
@@ -569,7 +576,7 @@ function responsaveis() {
         case "ligacoes_realizadas":
           header_modal.innerHTML = "Receber ligações realizadas no fixo";
           texto_modal.innerHTML =
-            sem_supervisor + "<li>" + email_assistenteadm + " </li>>/ul>";
+            sem_supervisor + "<li>" + email_assistenteadm + " </li></ul>";
           observacao.innerHTML =
             "OBS: Deve ser aberto chamado no SASKI antes para solicitar o arquivo .PDF contendo o histórico. <br/>OBS 2: Lembre-se de anexar o arquivo .PDF do histórico e o email que o cliente deseja receber o histórico.";
           link.innerHTML = "";
@@ -633,6 +640,7 @@ function responsaveis() {
             "<li>produtos.suporte@grupobrisanet.com.br </li></ul>";
           observacao.innerHTML = "";
           link.innerHTML = "";
+          break;
 
         case "globoplay":
           header_modal.innerHTML = "Reclamação Globoplay";
@@ -736,7 +744,7 @@ function responsaveis() {
   } else {
     document.getElementById("texto_modal").innerHTML =
       "ERRO: Selecione seu líder.";
-    }
+  }
   if (lider != "" && motivo != "") {
     const aparecer = document.getElementById("sucesso");
     document.getElementById("texto_resposaveis").innerHTML =
@@ -772,6 +780,4 @@ function apagar() {
   document.getElementById("link").innerHTML = "";
   document.getElementById("sucesso").innerHTML = "";
 }
-$("#myModal").on("shown.bs.modal", function () {
-  $("#myInput").trigger("focus");
-});
+
