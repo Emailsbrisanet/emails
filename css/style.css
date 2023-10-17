@@ -25,12 +25,14 @@ nav ul li {
   display: flex;
   gap: 24px;
 }
-li a, footer a {
+li a,
+footer a {
   text-decoration: none;
   color: white;
   border-bottom: 1px solid #dc3545;
 }
-li a:hover ,  footer a:hover{
+li a:hover,
+footer a:hover {
   text-decoration: none;
   color: white;
   border-bottom: 1px solid white;
@@ -95,7 +97,7 @@ form button {
 .botao {
   text-align: center;
 }
-.botao button{
+.botao button {
   border: 1px solid #dc3545;
 }
 .modal-header {
@@ -148,4 +150,11 @@ form button {
   font-weight: bold;
   margin-bottom: -20px;
   font-size: 18px;
+}
+.abrir_gmail {
+  float: right;
+}
+button a, button a:hover{
+  color:#FFFF;
+  text-decoration: none;
 }

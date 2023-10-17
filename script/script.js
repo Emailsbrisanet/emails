@@ -72,6 +72,152 @@ const suportes = [
   { nome: "sup_digital", email: "suporte-digital@grupobrisanet.com.br" },
   { nome: "sup_ativo", email: "suporte-ativo@grupobrisanet.com.br" },
 ];
+const texto_pronto = [
+  {
+    nome: "rota",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato informando sem acesso. Verifiquei que a rota do mesmo está inoperante desde o dia xx e o chamado no SASKI IMOC xx fora do prazo. Por gentileza, tem como me ajudar e solicitar prioridade nessa manutenção?%0AAgradeço desde já!",
+      formato:"Rota inoperante fora do prazo || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "janelas_indisponiveis",
+    descricao:
+      "Olá, bom dia! Ao abrir O.S para o cliente xx, o sistema me mostrou todas as janelas do mês indisponíveis. Tem como me ajudar por favor? %0AAgradeço desde já!",
+      formato:"Janelas indisponíveis para O.S || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "erro_coordenadas",
+    descricao:
+      "Olá, bom dia! Ao abrir O.S para o cliente xx sistema reporta erro de coordenadas, onde o cliente verbalizou o endereço corretamente e deixei anexado abaixo. Tem como verificar e me ajudar, por favor? %0AEndereço: Rua xx, n° xx, bairro xx, cidade xx - CEP xx",
+      formato:"Erro de coordenadas || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "reparo_fora",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato cobrando atendimento, demonstrando insatisfação pela demora. Visto que tem um O.S fora do prazo, onde tem diversos agendamentos não cumpridos e cliente com disponibilidade para o dia todo. Tem como me ajudar e priorizar por favor?%0AAgradeço desde já!",
+      formato:"Cobrança de reparo fora do prazo || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "instalacao_fora",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato cobrando instalação. Visto que está fora do prazo, onde tem diversos agendamentos não cumpridos e cliente com disponibilidade para o dia todo. Tem como me ajudar e priorizar por favor?%0AAgradeço desde já!",
+      formato:"Cobrança de instalação fora do prazo|| Código cliente || Cidade-UF",
+  },
+  {
+    nome: "reclamacao_instalacao",
+    descricao: "",
+    formato:"Reclamação de instalação || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "reclamacao_reparo",
+    descricao: "",
+    formato:"Reclamação de reparo|| Código cliente || Cidade-UF",
+  },
+  {
+    nome: "reclamacao_recolhimento",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato cobrando recolhimento de seu equipamento. Tem como priorizar a visita por favor?",
+      formato:"Cobrança de recolhimento de KIT || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "gravacao_ligacao",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato solicitando gravação da ligação com o setor. Deseja a ligação do atendente xx do dia xx as xxH, do setor Suporte Varejo Receptivo.%0ATem como verificar por favor? Agradeço desde já!",
+      formato:"Solicitação ligação|| Código cliente || Cidade-UF",
+  },
+  {
+    nome: "ligacores_recebidas",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato solicitando o histórico de ligações recebidas em seu fixo. Abri solicitação do arquivo contendo o histórico no SASKI pelo código TELEFONIA xxX, onde deixei anexado abaixo. Tem como me ajudar e enviar ao cliente por gentileza? Agradeço desde já!%0AEmail que deseja receber: xxX@xx.com",
+      formato:"Solicitação ligações recebidas || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "ligacoes_realizadas",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato solicitando o histórico de ligações realizadas em seu fixo. Abri solicitação do arquivo contendo o histórico no SASKI pelo código xx, onde deixei anexado abaixo. Tem como me ajudar e enviar ao cliente por gentileza? Agradeço desde já!%0AEmail que deseja receber: xx@xx.com",
+      formato:"Solicitação ligações realizadas|| Código cliente || Cidade-UF",
+  },
+  {
+    nome: "reclamacao_portabilidade",
+    descricao:
+      "Olá, bom dia! Cliente xx cobrando portabilidade. Visto que já passou dos 3 dias utéis, não encontrei nenhuma informação no chamado da portabilidade e sistema mostrando numero não portando ainda.%0ATem alguma informação que possa me ajudar por favor?",
+      formato:"Reclamação portabilidade || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "telefonia_desativada",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato informando estar sem acesso ao seu fixo. Telefonia desativada, onde realizei a configuração da porta FXs e reconfigurei a ONU, mesmo assim problema persiste. Tem como verificar e me ajudar por favor?%0AAgradeço desde já!",
+      formato:"Telefonia desativada || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "falha_autenticacao",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato informando estar sem acesso ao seu fixo. Telefonia com falha de autenticação, onde realizei a configuração da porta FXs e reconfigurei a ONU, mesmo assim problema persiste. Tem como verificar e me ajudar por favor?%0AAgradeço desde já!",
+      formato:"Telefonia com falha de autenticação || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "troca_numero",
+    descricao:
+      "Olá, bom dia! Cliente xx entrou em contato solicitando a troca do número de seu fixo. Tem como me ajudar por favor?",
+      formato:"Troca de número|| Código cliente || Cidade-UF",
+  },
+  {
+    nome: "brisacliente",
+    descricao: "",
+    formato:"Brisacliente || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "netflix",
+    descricao: "",
+    formato:"Netflix || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "globoplay",
+    descricao: "",
+    formato:"Globoplay || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "brisaMusic",
+    descricao: "",
+    formato:"Brisamusic|| Código cliente || Cidade-UF",
+  },
+  {
+    nome: "brisamovel",
+    descricao: "",
+    formato:"Brisamóvel || NOME cliente || Cidade-UF",
+  },
+  {
+    nome: "skeelo",
+    descricao: "",
+    formato:"Skeelo || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "qualifica",
+    descricao: "",
+    formato:"Qualifica || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "brisaplay",
+    descricao: "",
+    formato:"BrisaPlay || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "cancelamento",
+    descricao:
+      "Boa noite! Cliente xx entrou em contato solicitando o cancelamento. Visto setor em questão fora do expediente, tem como entrar em contato com o cliente e realizar a trativa?%0AAgradeço desde já!",
+      formato:"Solicitação cancelamento fora do horário de expediente || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "ouvidoria",
+    descricao: "",
+    formato:"Ouvidoria || Código cliente || Cidade-UF",
+  },
+  {
+    nome: "cipa",
+    descricao: "",
+    formato:"Cipa || Nome colaborador",
+  },
+];
 // const supervisores = [
 //   { nome: "Rodrigo Gurgel", email: "rodrigogurgel@grupobrisanet.com.br" },
 //   { nome: "Klebson Davi", email: "klebson.magalhaes@grupobrisanet.com.br" },
@@ -87,6 +233,8 @@ function responsaveis() {
   let email_lider;
   let email_supervisor;
   let email_assistenteadm;
+  let texto_auxiliar;
+  let formato_email;
   let checkbox = document.getElementById("marcar_gestor");
   //links
   let gestores_externos =
@@ -117,15 +265,27 @@ function responsaveis() {
     }
   }
   //encontrar assistente adm
-  for (let i = 0; i < lideres.length; i++) {
+  for (var i = 0; i < lideres.length; i++) {
     if (lideres[i].nome == lider) {
       email_assistenteadm = lideres[i].assistenteadm;
       break;
     }
   }
-  document.getElementById("sucesso").classList.add("escondido");
-  document.getElementById("texto_resposaveis").innerHTML = "";
-  document.getElementById("exampleModalLabel").innerHTML = "";
+  //encontrar o texto auxiliar
+  for (var i = 0; i < texto_pronto.length; i++) {
+    if (texto_pronto[i].nome == motivo) {
+      texto_auxiliar = texto_pronto[i].descricao;
+      break;
+    }
+  }
+  for (var i = 0; i < texto_pronto.length; i++) {
+    if(texto_pronto[i].nome == motivo){
+      formato_email = texto_pronto[i].formato;
+      break;
+    }
+    
+  }
+
   if (lider != "") {
     com_supervisor =
       "<ul class='ul_script'><li>" +
@@ -139,7 +299,6 @@ function responsaveis() {
       " </li><li>" +
       suportes[2].email +
       " </li>";
-
     sem_supervisor =
       "<ul class='ul_script'><li>" +
       email_lider +
@@ -227,7 +386,7 @@ function responsaveis() {
             " target='_BLANK'>Gestores IAT</a>";
           break;
 
-        case "Reclamacao_reparo":
+        case "reclamacao_reparo":
           header_modal.innerHTML =
             "Reclamação de reparo / alteração de endereço";
           texto_modal.innerHTML =
@@ -522,7 +681,7 @@ function responsaveis() {
             " target='_BLANK'>Gestores IAT</a>";
           break;
 
-        case "Reclamacao_reparo":
+        case "reclamacao_reparo":
           header_modal.innerHTML =
             "Reclamação de reparo / alteração de endereço";
           texto_modal.innerHTML =
@@ -749,12 +908,26 @@ function responsaveis() {
     const aparecer = document.getElementById("sucesso");
     document.getElementById("texto_resposaveis").innerHTML =
       "Responsáveis pela situação:";
+
+    document.getElementById("texto_auxiliar").innerHTML =
+      "<strong title='O texto terá um %0A, isso é para quebrar a linha dentro do gmail'>Texto auxiliar</strong>:<br/>" + texto_auxiliar;
+
+    document.getElementById("abrir_gmail").innerHTML =
+      "<button class='abrir_gmail btn btn-danger' id='remover_botao'><a target='_BLANK' href='https://mail.google.com/mail/?view=cm&fs=1&su="+formato_email+"&body="+texto_auxiliar+"'>Abrir no Gmail</a></button>";
+     
     aparecer.innerHTML = "Copiado com sucesso!";
     setTimeout(function () {
       aparecer.classList.remove("escondido");
     }, 900);
     aparecer.classList.add("sucesso");
     copiarTexto();
+  } else {
+    document.getElementById("remover_botao").remove();
+    //desabilitando algumas funções que habilitarei posteriormente
+    document.getElementById("sucesso").classList.add("escondido");
+    document.getElementById("texto_resposaveis").innerHTML = "";
+    document.getElementById("exampleModalLabel").innerHTML = "";
+    document.getElementById("texto_auxiliar").innerHTML = "";
   }
 }
 
@@ -780,4 +953,3 @@ function apagar() {
   document.getElementById("link").innerHTML = "";
   document.getElementById("sucesso").innerHTML = "";
 }
-
