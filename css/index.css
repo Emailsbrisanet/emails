@@ -1,65 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-family: sans-serif;
-  scroll-behavior: smooth;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-h2 {
-  text-align: center;
-}
-main {
-  padding-top: 150px;
-  flex: 1;
-}
-nav ul li {
-  list-style: none;
-  padding: 15px 0px 0px;
-  display: flex;
-  gap: 24px;
-}
-li a,
-footer a {
+button a,
+button a:hover {
+  color: #ffff;
   text-decoration: none;
-  color: white;
-  border-bottom: 1px solid #dc3545;
 }
-li a:hover,
-footer a:hover {
-  text-decoration: none;
-  color: white;
-  border-bottom: 1px solid white;
-}
-
-header {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: black;
-  color: white;
-  position: fixed;
-  z-index: 2;
-  align-items: center;
-  width: 100%;
-  height: 90px;
-}
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 10px;
-}
-img {
-  width: 130px;
-}
-
 form {
   margin: 0 auto;
   padding: 10px 20px;
@@ -154,7 +97,4 @@ form button {
 .abrir_gmail {
   float: right;
 }
-button a, button a:hover{
-  color:#FFFF;
-  text-decoration: none;
-}
+
