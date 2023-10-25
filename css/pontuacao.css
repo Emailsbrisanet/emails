@@ -13,8 +13,8 @@ form div {
 form input {
   padding: 0 10px;
   width: 40%;
-  border-radius: 20px;
-  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 span{
     text-decoration: underline;
